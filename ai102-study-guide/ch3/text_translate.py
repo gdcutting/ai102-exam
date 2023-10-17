@@ -1,7 +1,7 @@
 import azure.cognitiveservices.speech as speechsdk
 
 # Creates an instance of a speech config with specified subscription key and service region.
-speech_key, service_region = "8690493458544f9eac7da07f737f7d51", "westus"
+speech_key, service_region = "<ACCESS-KEY-GOES-HERE>", "westus"
 
 def translate_speech_to_text():
     translation_config = speechsdk.translation.SpeechTranslationConfig(subscription=speech_key, region=service_region)

@@ -5,7 +5,7 @@
 module.exports = function(context, myQueueItem){
     context.log('Processing queue message', myQueueItem);
     let https = require('https');
-    let accessKey = '49ee0dce446b43048191dee446fcf9dc';
+    let accessKey = '<ACCESS-KEY-GOES-HERE>';
     let uri = 'east.api.cognitive.microsoft.com';
     let path = 'text/analytics/v2.0/sentiment';
     let response_handler = function(response){

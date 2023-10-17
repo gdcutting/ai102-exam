@@ -2,7 +2,7 @@ import os
 import azure.cognitiveservices.speech as speechsdk
 
 # This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
-speech_config = speechsdk.SpeechConfig(subscription='357e9c7dfb9b4dee88ac52085c4a9d56', region='eastus')
+speech_config = speechsdk.SpeechConfig(subscription='<ACCESS-KEY-GOES-HERE>', region='eastus')
 audio_config = speechsdk.audio.AudioOutputConfig(use_default_speaker=True)
 
 # The language of the voice that speaks.
