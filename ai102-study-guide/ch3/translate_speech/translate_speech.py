@@ -23,4 +23,19 @@ def translate_speech_to_text():
     # shot recognition like command or query.  
     # For long-running multi-utterance recognition, use start_continuous_recognition() instead.  
     print("Say something...")  
-    result = recognizer.recognize_once()  # Check the result  if result.reason == speechsdk.ResultReason.TranslatedSpeech:  print("RECOGNIZED '{}': {}".format(fromLanguage, result.text))  print("TRANSLATED into {}: {}".format(toLanguage, result.translations[toLanguage]))  elif result.reason == speechsdk.ResultReason.RecognizedSpeech:  print("RECOGNIZED: {} (text could not be translated)".format(result.text))  elif result.reason == speechsdk.ResultReason.NoMatch:  print("NOMATCH: Speech could not be recognized: {}".format(result.no_match_details))  elif result.reason == speechsdk.ResultReason.Canceled:  print("CANCELED: Reason={}".format(result.cancellation_details.reason))  if result.cancellation_details.reason == speechsdk.CancellationReason.Error:
+    result = recognizer.recognize_once()  
+    
+    # Check the result  
+    if result.reason == speechsdk.ResultReason.TranslatedSpeech:  
+        print("RECOGNIZED '{}': {}".format(fromLanguage, result.text))  
+        print("TRANSLATED into {}: {}".format(toLanguage, result.translations[toLanguage]))  
+    elif result.reason == speechsdk.ResultReason.RecognizedSpeech:  
+        print("RECOGNIZED: {} (text could not be translated)".format(result.text)) 
+    elif result.reason == speechsdk.ResultReason.NoMatch:  
+        print("NOMATCH: Speech could not be recognized: {}".format(result.no_match_details))  
+    elif result.reason == speechsdk.ResultReason.Canceled:  
+        print("CANCELED: Reason={}".format(result.cancellation_details.reason))  
+    if result.cancellation_details.reason == speechsdk.CancellationReason.Error:
+        print("CANCELED: ErrorDetails={}".format(result.cancellation_details.error_details)) 
+        
+    translate_speech_to_text()
