@@ -1,6 +1,6 @@
 import azure.cognitiveservices.speech as speechsdk  
 
-speech_key, service_region = "YourSubscriptionKey", "YourServiceRegion"  
+speech_key, service_region = "357e9c7dfb9b4dee88ac52085c4a9d56", "westus"  
 
 def translate_speech_to_text():  
     # Creates an instance of a speech translation config with specified subscription key and service region.  
@@ -35,7 +35,7 @@ def translate_speech_to_text():
         print("NOMATCH: Speech could not be recognized: {}".format(result.no_match_details))  
     elif result.reason == speechsdk.ResultReason.Canceled:  
         print("CANCELED: Reason={}".format(result.cancellation_details.reason))  
-    if result.cancellation_details.reason == speechsdk.CancellationReason.Error:
+    if result.reason == speechsdk.CancellationReason.Error:
         print("CANCELED: ErrorDetails={}".format(result.cancellation_details.error_details)) 
         
-    translate_speech_to_text()
+translate_speech_to_text()
