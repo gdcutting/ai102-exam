@@ -1,8 +1,9 @@
 # From page 235 of the Kindle edition of the AI-102 study guide by IP Specialist
+# Lab 3-06
 
 import azure.cognitiveservices.speech as speechsdk  
 
-speech_key, service_region = "357e9c7dfb9b4dee88ac52085c4a9d56", "westus"  
+speech_key, service_region = "<key-goes-here>", "westus"  
 
 def translate_speech_to_speech():  
     # Creates an instance of a speech translation config with specified subscription key and service region.  
