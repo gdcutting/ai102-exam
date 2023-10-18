@@ -18,6 +18,9 @@ pids
 # virtual environments
 *venv/
 
+# keys
+*keys/
+
 # VS Code
 # *.vscode/
 
