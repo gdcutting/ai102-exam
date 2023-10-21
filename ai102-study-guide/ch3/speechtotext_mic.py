@@ -5,6 +5,7 @@ def recognize_from_microphone():
     """
     recognize_from_microphone() uses the Azure Speech SDK to translate short speech snippets into text.
     It prompts the user to speak into the microphone and, if speech is recognized, a text transcription is given.
+    This is in contrast to speechtotext.py, which transcribes from an audio file (not mic input)
     """
     # This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
     speech_config = speechsdk.SpeechConfig(subscription='<ACCESS-KEY-GOES-HERE>', region='westus')
