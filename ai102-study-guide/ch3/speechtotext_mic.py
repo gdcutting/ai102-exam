@@ -2,6 +2,10 @@ import os
 import azure.cognitiveservices.speech as speechsdk
 
 def recognize_from_microphone():
+    """
+    recognize_from_microphone() uses the Azure Speech SDK to translate short speech snippets into text.
+    It prompts the user to speak into the microphone and, if speech is recognized, a text transcription is given.
+    """
     # This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
     speech_config = speechsdk.SpeechConfig(subscription='<ACCESS-KEY-GOES-HERE>', region='westus')
     speech_config.speech_recognition_language="en-US"
