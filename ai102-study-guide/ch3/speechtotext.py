@@ -1,5 +1,9 @@
 import azure.cognitiveservices.speech as speechsdk
 
+# This script uses the Azure Speech SDK to translate short speech snippets into text.
+# It reads an audio files and, if speech is recognized, a text transcription is given.
+# This is in contrast to speechtotext.py, which transcribes from mic input.
+
 # Creates an instance of a speech config with specified subscription key and service region.
 # Replace with your own subscription key and service region (e.g., "westus").
 speech_key, service_region = "<ACCESS-KEY-GOES-HERE>", "westus"
