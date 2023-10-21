@@ -4,6 +4,12 @@ import azure.cognitiveservices.speech as speechsdk
 speech_key, service_region = "<ACCESS-KEY-GOES-HERE>", "westus"
 
 def translate_speech_to_text():
+    """
+    translate_speech_to_text() translates speech input to another language and outputs the translated text.
+    The user can specify input and output languages.
+    The user is prompted to speak into the mic, and if speech is recognized, it is translated into the target language.
+    The text of this translation is the output.
+    """
     translation_config = speechsdk.translation.SpeechTranslationConfig(subscription=speech_key, region=service_region)
 
     from_language = 'en-US'
