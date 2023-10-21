@@ -1,6 +1,9 @@
 import os
 import azure.cognitiveservices.speech as speechsdk
 
+# This script accepts text as input and outputs the corresponding synthesized speech.
+# The user is prompted to input text, and the Azure SDK is used to produce a synthesized voice version of the text.
+
 # This example requires environment variables named "SPEECH_KEY" and "SPEECH_REGION"
 speech_config = speechsdk.SpeechConfig(subscription='<ACCESS-KEY-GOES-HERE>', region='eastus')
 audio_config = speechsdk.audio.AudioOutputConfig(use_default_speaker=True)
